@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import React from 'react';
-import SearchBar from './common/components/SearchBar/SearchBar';
+import Homepage from './pages/Homepage/Homepage';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <SearchBar />
+      <Homepage />
     </div>
   );
 }

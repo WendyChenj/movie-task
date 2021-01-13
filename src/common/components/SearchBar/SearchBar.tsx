@@ -1,28 +1,16 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { thunkSearchMovieList } from '../../store/movie/movieActionCreator';
-import { RootState } from '../../store/store';
-import * as types from '../../models/types';
 import { AppBar, Toolbar, Typography, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import './searchBar.css';
 
-const SearchBar = (): JSX.Element => {
-  const movieList = useSelector((state: RootState) => state.movieList.movieList);
+interface Props {
+  searchTerm: string;
+  handleSearch: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
 
-  const dispatch = useDispatch();
-
-  const handleFetch = (e: React.MouseEvent) => {
-    e.preventDefault();
-    dispatch(thunkSearchMovieList());
-  };
-
-  let movieEle: JSX.Element[] | null = null;
-
-  if (movieList !== null) {
-    movieEle = movieList.map((movie: types.Movie) => <div key={movie.id}>{movie.title}</div>);
-  }
-
+const SearchBar = ({ searchTerm, handleSearch }: Props): JSX.Element => {
   return (
     <div>
       <AppBar position="static">
@@ -32,12 +20,14 @@ const SearchBar = (): JSX.Element => {
             <div className="search-icon">
               <SearchIcon color="primary" />
             </div>
-            <InputBase placeholder="Search by movie title... " />
+            <InputBase
+              placeholder="Search by movie title... "
+              value={searchTerm}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSearch(e)}
+            />
           </div>
         </Toolbar>
       </AppBar>
-      <button onClick={(e: React.MouseEvent) => handleFetch(e)}>fetch</button>
-      {movieEle}
     </div>
   );
 };
