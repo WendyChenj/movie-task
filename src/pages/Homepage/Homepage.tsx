@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../common/store/store';
 import { thunkSearchMovieList, initMovieList } from '../../common/store/movie/movieActionCreator';
 import SearchBar from '../../common/components/SearchBar/SearchBar';
 import MovieListContainer from '../../common/components/MovieListContainer/MovieListContainer';
 
 const Homepage = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
+  const nominateList = useSelector((state: RootState) => state.movieList.nominateList);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (searchTerm !== '') {
-      console.log('dispatch');
-      dispatch(thunkSearchMovieList(searchTerm));
+      dispatch(thunkSearchMovieList(searchTerm, nominateList));
     } else {
       dispatch(initMovieList());
     }
   }, [searchTerm]);
-
-  console.log(searchTerm);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     e.preventDefault();

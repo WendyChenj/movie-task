@@ -1,0 +1,31 @@
+.list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.results-container {
+  margin-left: 1.5rem;
+  border: 1px solid #9e9e9e;
+  border-radius: 5px;
+  box-shadow: 5px 2px 5px #616161;
+  text-align: left;
+  padding: 2rem;
+}
+
+.results-text {
+  padding-bottom: 1.5rem;
+}
+
+.list-item-text {
+  padding-top: 0.5rem;
+}
+
+.list-item-icon {
+  min-width: 2rem;
+}
+
+.dot-icon {
+  color: black;
+  font-size: 0.75rem;
+}
