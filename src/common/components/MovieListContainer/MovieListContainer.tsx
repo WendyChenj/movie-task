@@ -3,7 +3,7 @@ import { RootState } from '../../store/store';
 import { useSelector } from 'react-redux';
 import SearchResults from '../SearchResults/SearchResults';
 import NominationResults from '../NominationResults/NominationResults';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import './movieListContainer.css';
 
@@ -17,10 +17,10 @@ const MovieListContainer = ({ searchTerm }: Props): JSX.Element => {
   return (
     <div className="movie-list-container">
       <Grid container justify="center">
-        <Grid item xs={10} sm={5}>
+        <Grid item xs={10} md={6} lg={5}>
           <SearchResults searchTerm={searchTerm} searchResults={searchResults} />
         </Grid>
-        <Grid item xs={10} sm={5}>
+        <Grid item xs={10} md={6} lg={5}>
           <NominationResults />
         </Grid>
       </Grid>

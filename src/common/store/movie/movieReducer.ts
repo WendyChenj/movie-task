@@ -55,7 +55,9 @@ const moviesReducer = (state: types.MovieState = initialState, action: MovieActi
     case REMOVE_NOMINATED_MOVIE:
       let removeNominatedMovieList: types.MovieList = state.movieList;
       let newNominateList: types.MovieList = state.nominateList;
-      if (newNominateList) {
+      if (newNominateList && newNominateList.length === 1) {
+        newNominateList = null;
+      } else if (newNominateList) {
         newNominateList = newNominateList.filter((movie) => movie.id !== action.movie.id);
       }
       if (state.movieList) {

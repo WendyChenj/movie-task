@@ -2,6 +2,7 @@ import React from 'react';
 import * as types from '../../models/types';
 import { ListItem, ListItemText, ListItemIcon, Button } from '@material-ui/core';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import './movieItem.css';
 
 type Props = {
   movie: types.Movie;

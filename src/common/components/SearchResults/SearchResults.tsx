@@ -3,8 +3,7 @@ import * as types from '../../models/types';
 import { useDispatch } from 'react-redux';
 import { nominateMovie } from '../../store/movie/movieActionCreator';
 import MovieItem from '../MovieItem/MovieItem';
-import { Typography, List, ListItem, ListItemText, ListItemIcon, Button } from '@material-ui/core';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { Typography, List } from '@material-ui/core';
 import './searchResults.css';
 
 type Props = {

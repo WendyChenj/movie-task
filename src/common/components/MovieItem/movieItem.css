@@ -1,0 +1,18 @@
+.list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.list-item-text {
+  padding-top: 0.5rem;
+}
+
+.list-item-icon {
+  min-width: 2rem;
+}
+
+.dot-icon {
+  color: black;
+  font-size: 0.75rem;
+}
