@@ -26,3 +26,23 @@ The shoppies is a responsive web app which helps manage movie nominations for en
 ##### Search movies by movie title
 
 <img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/search-movies.gif' />
+
+##### Nominate your favourite movie
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/nominate-movies.gif' />
+
+##### Remove movies from nomination list
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/remove-nominee.gif' />
+
+##### Banner shows when there are 5 nominees
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/banner-show.gif' />
+
+##### Banner disappears when the number of nominees is under 5
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/remove-nominee-banner-disappear.gif' />
+
+##### Share your nomination list to twitter
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/share-to-twitter.gif' />
