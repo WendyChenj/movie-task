@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { thunkSearchMovieList } from '../../store/movie/movieActionCreator';
+import React from 'react';
+import './searchBar.css';
+// Material UI Imports
 import { AppBar, Toolbar, Typography, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import './searchBar.css';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 interface Props {
   searchTerm: string;
@@ -11,6 +11,7 @@ interface Props {
 }
 
 const SearchBar = ({ searchTerm, handleSearch }: Props): JSX.Element => {
+  const matches = useMediaQuery('(min-width:600px)');
   return (
     <div>
       <AppBar position="static">
@@ -21,7 +22,7 @@ const SearchBar = ({ searchTerm, handleSearch }: Props): JSX.Element => {
               <SearchIcon color="primary" />
             </div>
             <InputBase
-              placeholder="Search by movie title... "
+              placeholder={matches ? 'Search by movie title... ' : 'Search...'}
               value={searchTerm}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleSearch(e)}
             />

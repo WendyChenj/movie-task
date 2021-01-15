@@ -1,31 +1,36 @@
 import React from 'react';
-import * as types from '../../models/types';
-import { useDispatch } from 'react-redux';
-import { nominateMovie } from '../../store/movie/movieActionCreator';
-import MovieItem from '../MovieItem/MovieItem';
-import { Typography, List, ListItem, ListItemText, ListItemIcon, Button } from '@material-ui/core';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import './searchResults.css';
+import MovieItem from '../MovieItem/MovieItem';
+import * as types from '../../models/types';
+// Redux Imports
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../store/store';
+import { nominateMovie } from '../../store/movie/movieActionCreator';
+// Material UI Imports
+import { Typography, List } from '@material-ui/core';
 
 type Props = {
   searchTerm: string;
-  searchResults: types.MovieList;
 };
 
-const SearchResults = ({ searchTerm, searchResults }: Props): JSX.Element => {
+const SearchResults = ({ searchTerm }: Props): JSX.Element => {
+  // Get movie list from store
+  const searchResults = useSelector((state: RootState) => state.movieList.movieList);
   const dispatch = useDispatch();
 
+  // click button to nominate & dispatch action -> nominateMovie
   const handleNominate = (e: React.MouseEvent, movie: types.Movie): void => {
     e.preventDefault();
     dispatch(nominateMovie(movie));
   };
 
   let resultsList: JSX.Element[] | null = null;
-  let resultsText: JSX.Element | null = null;
+  let instructionText: JSX.Element | null = null;
+
   if (searchTerm === '') {
-    resultsText = <Typography>Oops, seems you haven&#39;t started searching yet.</Typography>;
+    instructionText = <Typography>Oops, seems you haven&#39;t started searching yet.</Typography>;
   } else if (searchTerm !== '' && searchResults === null) {
-    resultsText = <Typography>Please be specific about your movie title</Typography>;
+    instructionText = <Typography>Please be specific about your movie title</Typography>;
   }
 
   if (searchResults) {
@@ -39,7 +44,10 @@ const SearchResults = ({ searchTerm, searchResults }: Props): JSX.Element => {
       <Typography variant="h6" className="results-text">
         Results for &quot; {searchTerm} &quot;:
       </Typography>
-      {resultsText}
+
+      {/* To give instruction at the beginning */}
+      {instructionText}
+
       <List>{resultsList}</List>
     </div>
   );
