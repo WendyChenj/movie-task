@@ -36,7 +36,7 @@ export const thunkSearchMovieList = (
   searchTerm: string,
   nominateList: types.NominateList,
 ): ThunkAction<void, RootState, unknown, Action<string>> => async (dispatch) => {
-  // fetch movie results according to the search term from OMDB's API 
+  // fetch movie results according to the search term from OMDB's API
   fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=ba6cc2fc&type=movie`)
     .then((response) => response.json())
     .then((json: ResponseAPI) => {
