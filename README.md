@@ -46,3 +46,7 @@ The shoppies is a responsive web app which helps manage movie nominations for en
 ##### Share your nomination list to twitter
 
 <img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/share-to-twitter.gif' />
+
+##### The Shoppies in phone size
+
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/share-to-twitter.gif' />
