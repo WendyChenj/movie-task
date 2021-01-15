@@ -40,7 +40,7 @@ const NominationResults = (): JSX.Element => {
   }
 
   // Share the nomination list on twitter
-  const twitterHref = `https://twitter.com/intent/tweet?hashtags=quotes&text= ${encodeURIComponent(twitterText)}`;
+  const twitterHref = `https://twitter.com/intent/tweet?hashtags=nominee&text= ${encodeURIComponent(twitterText)}`;
 
   return (
     <div className="nomination-results-container">
