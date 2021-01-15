@@ -1,26 +1,24 @@
 import React from 'react';
-import { RootState } from '../../store/store';
-import { useSelector } from 'react-redux';
+import './movieListContainer.css';
 import SearchResults from '../SearchResults/SearchResults';
 import NominationResults from '../NominationResults/NominationResults';
+// Material UI Imports
 import { Grid } from '@material-ui/core';
-
-import './movieListContainer.css';
 
 type Props = {
   searchTerm: string;
 };
 
+// The container is for both search results and nomination lists
 const MovieListContainer = ({ searchTerm }: Props): JSX.Element => {
-  const searchResults = useSelector((state: RootState) => state.movieList.movieList);
-
   return (
     <div className="movie-list-container">
       <Grid container justify="center">
-        <Grid item xs={10} md={6} lg={5}>
-          <SearchResults searchTerm={searchTerm} searchResults={searchResults} />
+        <Grid item xs={12} md={6} lg={5}>
+          <SearchResults searchTerm={searchTerm} />
         </Grid>
-        <Grid item xs={10} md={6} lg={5}>
+
+        <Grid item xs={12} md={6} lg={5}>
           <NominationResults />
         </Grid>
       </Grid>

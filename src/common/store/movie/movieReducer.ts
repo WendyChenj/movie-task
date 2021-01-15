@@ -28,7 +28,7 @@ const moviesReducer = (state: types.MovieState = initialState, action: MovieActi
       let newNominatedMovieList: types.MovieList = state.movieList;
       let newNominatedMovie: types.Movie = action.movie;
 
-      // change isNominated property to true for nominated movie and update movie list
+      // update isNominated property to true, update movie list
       if (state.movieList) {
         newNominatedMovieList = state.movieList.map((movie) => {
           if (movie.id === action.movie.id) {
@@ -41,6 +41,7 @@ const moviesReducer = (state: types.MovieState = initialState, action: MovieActi
           return movie;
         });
       }
+      // add the nominee into nominate list
       if (state.nominateList) {
         return {
           movieList: newNominatedMovieList,
@@ -55,11 +56,14 @@ const moviesReducer = (state: types.MovieState = initialState, action: MovieActi
     case REMOVE_NOMINATED_MOVIE:
       let removeNominatedMovieList: types.MovieList = state.movieList;
       let newNominateList: types.MovieList = state.nominateList;
+
+      // remove movie from nomination list: if there is only one movie in the list, update the nominationList to null
       if (newNominateList && newNominateList.length === 1) {
         newNominateList = null;
       } else if (newNominateList) {
         newNominateList = newNominateList.filter((movie) => movie.id !== action.movie.id);
       }
+      // update the nominate status of movies in movie list
       if (state.movieList) {
         removeNominatedMovieList = state.movieList.map((movie) => {
           if (movie.id === action.movie.id) {

@@ -10,7 +10,6 @@ import * as types from '../../models/types';
 import { nominatedCheck } from '../../utils/utils';
 import { RootState } from '../store';
 import { ThunkAction } from 'redux-thunk';
-
 interface MovieFromAPI {
   Title: string;
   Year: string;
@@ -37,12 +36,14 @@ export const thunkSearchMovieList = (
   searchTerm: string,
   nominateList: types.NominateList,
 ): ThunkAction<void, RootState, unknown, Action<string>> => async (dispatch) => {
+  // fetch movie results according to the search term from OMDB's API 
   fetch(`http://www.omdbapi.com/?s=${searchTerm}&apikey=ba6cc2fc&type=movie`)
     .then((response) => response.json())
     .then((json: ResponseAPI) => {
+      // Too many results will cause false reponse
       if (json.Response === 'True') {
         const movieList: types.MovieList = json.Search.map((movie: MovieFromAPI) => {
-          // check if the movie is nominated or not
+          // check if the movie is nominated or not and update the isNominated property
           let nominated = false;
           if (nominateList) {
             nominated = nominatedCheck(nominateList, movie.imdbID);
