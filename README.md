@@ -25,4 +25,4 @@ The shoppies is a responsive web app which helps manage movie nominations for en
 
 ##### Search movies by movie title
 
-<img href='./media/search-movies.gif' />
+<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/search-movies.gif' />
