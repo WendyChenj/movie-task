@@ -45,7 +45,10 @@ const NominationResults = (): JSX.Element => {
   return (
     <div className="nomination-results-container">
       {/* Show banner under certain condition */}
-      {nominateResults && nominateResults.length >= 5 ? <Banner /> : null}
+      {nominateResults && nominateResults.length === 5 ? <Banner title="You've got 5 nominees!" /> : null}
+      {nominateResults && nominateResults.length > 5 ? (
+        <Banner title="Please keep your nomination number at 5!" />
+      ) : null}
 
       <Typography variant="h6" className="nomination-results-text">
         Nominations:
