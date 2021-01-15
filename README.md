@@ -29,30 +29,30 @@ Feel free to open this application in devices with different screen sizes
 
 ##### Search movies by movie title
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/search-movies.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/search-movies.gif' />
 
 ##### Nominate your favourite movie
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/nominate-movies.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/nominate-movies.gif' />
 
 ##### Remove movies from nomination list
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/remove-nominee.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/remove-nominee.gif' />
 
 ##### Banner shows when there are 5 nominees
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/banner-show.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/banner-show.gif' />
 
 ##### Banner disappears when the number of nominees is under 5
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/remove-nominee-banner-disappear.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/remove-nominee-banner-disappear.gif' />
 
 ##### Share your nomination list to twitter
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/share-to-twitter.gif' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/share-to-twitter.gif' />
 
 ##### The Shoppies in phone size
 
-<img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/shoppies-in-phone-size.png' width='320px' />
+<img src='https://github.com/WendyChenj/movie-task/blob/master/media/shoppies-in-phone-size.png' width='320px' />
 
 @ Make Commerce Better - Wendy
