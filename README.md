@@ -2,6 +2,8 @@
 
 The shoppies is a responsive web app including desktop view, iPad view and mobile view which helps manage movie nominations for entrepreneurs. Users can search movies, choose their favorite movies and nominate them! A notification will show up when users have chosen 5 nominees.
 
+<a href='https://frosty-bhaskara-deaa36.netlify.app/'>See it live<a>
+
 ### Key Technologies
 
 ##### Programming Lanague:
