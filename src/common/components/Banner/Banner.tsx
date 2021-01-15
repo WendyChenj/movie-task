@@ -4,12 +4,15 @@ import './banner.css';
 import { Typography } from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 
+type Props = {
+  title: string;
+};
 // When there are 5 nominees, the banner will show
-const Banner = (): JSX.Element => {
+const Banner = ({ title }: Props): JSX.Element => {
   return (
     <div className="banner-container">
       <CheckCircleIcon color="secondary" className="check-circle-icon" />
-      <Typography color="secondary">You&#39;ve got at least 5 nominations!</Typography>
+      <Typography color="secondary">{title}</Typography>
     </div>
   );
 };

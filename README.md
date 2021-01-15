@@ -4,25 +4,25 @@ The shoppies is a responsive web app which helps manage movie nominations for en
 
 ### Key Technologies
 
-###### Programming Lanague:
+##### Programming Lanague:
 
 - TypeScript
 
-###### JavaScript Framework
+##### JavaScript Framework
 
 - react
 
-###### Application State:
+##### Application State:
 
 - redux
 - react-redux
 
-###### UI
+##### UI
 
 - Material-UI
 
 ### Demo
 
-###### Search movies by movie title
+##### Search movies by movie title
 
 <img src='https://github.com/WendyChenj/shoppies-movie-awards/blob/master/media/search-movies.gif' />
