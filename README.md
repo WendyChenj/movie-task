@@ -55,4 +55,4 @@ Feel free to open this application in devices with different screen sizes
 
 <img src='https://github.com/WendyChenj/movie-task/blob/master/media/shoppies-in-phone-size.png' width='320px' />
 
-@ Make Commerce Better - Wendy
+@ Happy coding - Wendy
